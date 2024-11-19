@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "HouseCalgary Authentication Skipper",
+  "version": "1.0",
+  "description": "Skips the authentication page on HouseCalgary",
+  "permissions": ["tabs", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.housescalgary.ca/property-search/detail*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
